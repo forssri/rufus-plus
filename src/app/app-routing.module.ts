@@ -6,7 +6,7 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: ComingSoonComponent },
-  { path: 'dev/home', component: HomeComponent }
+  { path: 'home', component: HomeComponent }
 ];
 
 @NgModule({
