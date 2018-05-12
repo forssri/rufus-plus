@@ -1,0 +1,13 @@
+.intent-container {
+    height: 100%;
+}
+
+.intent-card {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+.intent-card-content {
+    margin-top: 30px;
+}
