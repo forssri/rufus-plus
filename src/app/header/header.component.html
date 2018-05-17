@@ -5,10 +5,18 @@
   </button>
   <span class="spacer"></span>
   <div fxLayout="row" *ngIf="afAuth.user | async as user; else showLogin">
-    <button mat-button >{{ user.displayName }}</button>
-    <button mat-raised-button color="accent" (click)="logout()">Logout</button>
+    <button mat-button>{{ user.displayName }}</button>
+    <mat-menu #userMenuLogged="matMenu">
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>power_settings_new</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="userMenuLogged">
+      <mat-icon>more_vert</mat-icon>
+    </button>
   </div>
   <ng-template #showLogin>
-    <button mat-raised-button color="accent" (click)="login()">Login with Google</button>
+    <button mat-raised-button color="accent" (click)="login()">LOGIN WITH GOOGLE</button>
   </ng-template>
 </mat-toolbar>

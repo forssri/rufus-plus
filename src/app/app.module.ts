@@ -5,7 +5,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { MatIconModule, MatButtonModule, MatToolbarModule, MatCardModule } from '@angular/material';
+import { MatIconModule, MatButtonModule, MatToolbarModule, MatCardModule, MatMenuModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -32,6 +32,7 @@ import { environment } from '../environments/environment';
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
+    MatMenuModule,
     FlexLayoutModule
   ],
   providers: [],
