@@ -4,4 +4,11 @@
     &nbsp;BLOOD DONATION
   </button>
   <span class="spacer"></span>
+  <div fxLayout="row" *ngIf="afAuth.user | async as user; else showLogin">
+    <button mat-button >{{ user.displayName }}</button>
+    <button mat-raised-button color="accent" (click)="logout()">Logout</button>
+  </div>
+  <ng-template #showLogin>
+    <button mat-raised-button color="accent" (click)="login()">Login with Google</button>
+  </ng-template>
 </mat-toolbar>

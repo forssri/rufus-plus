@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   firebase: {
     apiKey: 'AIzaSyDtBB18DiVoq46VdOoVHKDaCfk_VgwfoTc',
-    authDomain: 'blooddonation-007.firebaseapp.com',
+    authDomain: 'blooddonation.app',
     databaseURL: 'https://blooddonation-007.firebaseio.com',
     projectId: 'blooddonation-007',
     storageBucket: 'blooddonation-007.appspot.com',
