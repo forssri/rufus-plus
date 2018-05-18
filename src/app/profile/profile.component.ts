@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
   profileForm: FormGroup;
   constructor(
     private fb: FormBuilder,
-    private userService: UserService
+    public userService: UserService
   ) {
     this.profileForm = this.fb.group({
       name: this.userService.firebaseUser.displayName,
