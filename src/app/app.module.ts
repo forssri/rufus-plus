@@ -16,6 +16,10 @@ import {
   MatDatepickerModule,
   MatNativeDateModule
 } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,7 +28,8 @@ import { HomeComponent } from './home/home.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { environment } from '../environments/environment';
 import { ProfileComponent } from './profile/profile.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserEffects } from './effects/user.effects';
+import { userReducer } from './reducers/user.reducer';
 
 @NgModule({
   declarations: [
@@ -42,6 +47,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    EffectsModule.forRoot([
+      UserEffects
+    ]),
+    StoreModule.forRoot({
+      user: userReducer
+    }),
+    !environment.production ? StoreDevtoolsModule.instrument({}) : [],
     FlexLayoutModule,
     AppRoutingModule,
     MatIconModule,
