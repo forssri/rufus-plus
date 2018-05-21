@@ -21,7 +21,8 @@ export class CreateRequestComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
+  ngOnInit() {}
+  saveRequest() {
+    console.log(this.requestForm.value);
   }
-
 }
