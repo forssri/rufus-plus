@@ -14,7 +14,11 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatSelectModule,
+  MatRadioModule,
+  DateAdapter,
+  MAT_DATE_FORMATS
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
@@ -25,7 +29,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { environment } from '../environments/environment';
 import { ProfileComponent } from './profile/profile.component';
 import { UserEffects } from './effects/user.effects';
@@ -36,7 +39,6 @@ import { userReducer } from './reducers/user.reducer';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ComingSoonComponent,
     ProfileComponent
   ],
   imports: [
@@ -64,6 +66,8 @@ import { userReducer } from './reducers/user.reducer';
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
+    MatSelectModule,
+    MatRadioModule,
     MatNativeDateModule
   ],
   providers: [],

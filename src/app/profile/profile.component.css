@@ -1,3 +1,11 @@
 .mat-actions {
     margin: 20px auto;
 }
+
+.profile-form-field {
+    min-width: 23%;
+}
+
+.profile-radio {
+    margin-right: 20px;
+}
