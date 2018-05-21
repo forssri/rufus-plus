@@ -99,6 +99,12 @@ export class UserEffects {
                 return Observable.fromPromise(this.router.navigate(['profile']));
             }
         });
+    @Effect({ dispatch: false })
+    logOut: Observable<Action> = this.actions.ofType(userActions.LOGOUT, userActions.UPDATE_PROFILE_SUCCESS)
+        .map((action: userActions.Logout | userActions.UpdateProfileSuccess) => action.payload)
+        .switchMap(payload => {
+            return Observable.fromPromise(this.router.navigate(['/']));
+        });
     private googleLogin(): Promise<any> {
         const provider = new firebase.auth.GoogleAuthProvider();
         return this.afAuth.auth.signInWithPopup(provider);
