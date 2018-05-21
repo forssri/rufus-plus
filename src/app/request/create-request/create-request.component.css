@@ -1,0 +1,15 @@
+.request-form {
+    padding: 20px;
+}
+
+.request-form-group {
+    width: 100%;
+}
+
+.request-form-field {
+    min-width: 30%;
+}
+
+.request-form-actions {
+    padding: 20px;
+}

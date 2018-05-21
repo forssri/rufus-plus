@@ -1,0 +1,53 @@
+<form class="request-form mat-typography" [formGroup]="requestForm" fxLayout="row wrap">
+  <h2>Patient details</h2>
+  <div class="request-form-group" fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutGap="10px">
+    <mat-form-field class="request-form-field">
+      <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+    <mat-form-field class="request-form-field">
+      <input matInput [matDatepicker]="dobPicker" placeholder="Date of Birth" formControlName="dob">
+      <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+      <mat-datepicker #dobPicker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="request-form-field">
+      <mat-select placeholder="Sex" formControlName="sex">
+        <mat-option value="male">Male</mat-option>
+        <mat-option value="female">Female</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <h2>Request details</h2>
+  <div class="request-form-group" fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutGap="10px">
+    <mat-form-field class="request-form-field">
+      <mat-select placeholder="Request for" formControlName="requestFor">
+        <mat-option value="blood">Blood</mat-option>
+        <mat-option value="platelets">Platelets</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="request-form-field">
+      <mat-select placeholder="Blood group" formControlName="bloodGroup">
+        <mat-option value="a+ve">A +ve</mat-option>
+        <mat-option value="a-ve">A -ve</mat-option>
+        <mat-option value="b+ve">B +ve</mat-option>
+        <mat-option value="b-ve">B -ve</mat-option>
+        <mat-option value="ab+ve">AB +ve</mat-option>
+        <mat-option value="o+ve">O +ve</mat-option>
+        <mat-option value="o-ve">O -ve</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="request-form-field">
+      <input matInput placeholder="Number of Units" formControlName="units">
+    </mat-form-field>
+    <mat-form-field class="request-form-field">
+      <input matInput placeholder="Location" formControlName="location">
+    </mat-form-field>
+    <mat-form-field class="request-form-field">
+      <input matInput [matDatepicker]="requiredOnPicker" placeholder="Required on" formControlName="requiredDate">
+      <mat-datepicker-toggle matSuffix [for]="requiredOnPicker"></mat-datepicker-toggle>
+      <mat-datepicker #requiredOnPicker></mat-datepicker>
+    </mat-form-field>
+  </div>
+</form>
+<div class="request-form-actions">
+  <button mat-raised-button color="accent" (click)="saveProfile()">SUBMIT</button>
+</div>

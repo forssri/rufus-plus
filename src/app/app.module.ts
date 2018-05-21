@@ -18,7 +18,8 @@ import {
   MatSelectModule,
   MatRadioModule,
   DateAdapter,
-  MAT_DATE_FORMATS
+  MAT_DATE_FORMATS,
+  MatTabsModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
@@ -33,13 +34,19 @@ import { environment } from '../environments/environment';
 import { ProfileComponent } from './profile/profile.component';
 import { UserEffects } from './effects/user.effects';
 import { userReducer } from './reducers/user.reducer';
+import { RequestComponent } from './request/request.component';
+import { CreateRequestComponent } from './request/create-request/create-request.component';
+import { ListRequestComponent } from './request/list-request/list-request.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    RequestComponent,
+    CreateRequestComponent,
+    ListRequestComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +75,8 @@ import { userReducer } from './reducers/user.reducer';
     MatDatepickerModule,
     MatSelectModule,
     MatRadioModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
