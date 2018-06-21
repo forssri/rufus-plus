@@ -8,6 +8,8 @@ import { UserService } from '../services/user.service';
 import { User } from '../models';
 import * as userActions from '../actions/user.action';
 import { AppState } from '../app.init';
+import { MatIconRegistry } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-header',
@@ -18,8 +20,17 @@ export class HeaderComponent implements OnInit {
   user$: Observable<User>;
   constructor(
     private userService: UserService,
-    private store: Store<AppState>
-  ) { }
+    private store: Store<AppState>,
+    iconRegistry: MatIconRegistry,
+    sanitizer: DomSanitizer
+  ) {
+    iconRegistry.addSvgIcon(
+      'blood-donation',
+      sanitizer.bypassSecurityTrustResourceUrl(
+        'assets/images/blood-donation.svg'
+      )
+    );
+  }
 
   ngOnInit() {
     this.user$ = this.store.select('user');
@@ -33,5 +44,4 @@ export class HeaderComponent implements OnInit {
   logout() {
     this.store.dispatch(new userActions.Logout());
   }
-
 }

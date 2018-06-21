@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -52,13 +53,12 @@ import { ListRequestComponent } from './request/list-request/list-request.compon
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    EffectsModule.forRoot([
-      UserEffects
-    ]),
+    EffectsModule.forRoot([UserEffects]),
     StoreModule.forRoot({
       user: userReducer
     }),
@@ -81,4 +81,4 @@ import { ListRequestComponent } from './request/list-request/list-request.compon
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
