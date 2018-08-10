@@ -18,12 +18,10 @@
   </div>
   <h2>Request details</h2>
   <div class="request-form-group" fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutGap="10px">
-    <mat-form-field class="request-form-field">
-      <mat-select placeholder="Request for" formControlName="requestFor">
-        <mat-option value="blood">Blood</mat-option>
-        <mat-option value="platelets">Platelets</mat-option>
-      </mat-select>
-    </mat-form-field>
+    <mat-button-toggle-group class="request-for-button" formControlName="requestFor" aria-label="Request for">
+      <mat-button-toggle value="blood">Blood</mat-button-toggle>
+      <mat-button-toggle value="platelets">Platelets</mat-button-toggle>
+    </mat-button-toggle-group>
     <mat-form-field class="request-form-field">
       <mat-select placeholder="Blood group" formControlName="bloodGroup">
         <mat-option value="a+ve">A +ve</mat-option>

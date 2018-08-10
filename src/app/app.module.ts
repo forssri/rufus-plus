@@ -20,7 +20,8 @@ import {
   MatRadioModule,
   DateAdapter,
   MAT_DATE_FORMATS,
-  MatTabsModule
+  MatTabsModule,
+  MatButtonToggleModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
@@ -76,7 +77,8 @@ import { ListRequestComponent } from './request/list-request/list-request.compon
     MatSelectModule,
     MatRadioModule,
     MatNativeDateModule,
-    MatTabsModule
+    MatTabsModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

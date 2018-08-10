@@ -1,3 +1,5 @@
-.no-padding {
+.request-card {
     padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
 }
