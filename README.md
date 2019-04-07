@@ -1,10 +1,23 @@
 [![Build Status](https://travis-ci.org/forssri/blooddonation.svg?branch=master)](https://travis-ci.org/forssri/blooddonation)
 
-# Blood Donation
+Rufus+ aims to change the workflow of Blood/Platelet donation. It is a free and open source portal.
 
-The project is to convert the blood donation flow to push based, where the donors register in our app and set a base location. If any request posted near them for blood or platelets, they will get push notification.
+# Current flow
+ - Patient/Attender gets the list of donors from blood bank
+ - Calls/Messages donors to check availability
+ - Lot of manual effort needed
 
-## Technology
+# What are we trying
+ - Donor registers in Rufus+ by choosing the area where they can donate
+ - Patient/Attender creates a request for blood/platelet by choosing location
+ - Every donor who matches the donation criteria and location gets a push notification
+ - Donor responds to the request
+ - Real time tracking of how many donors have acknowledged
 
-Angular 7, using Angular Material & NgRx
-Firebase
+# Technology
+
+ - Angular latest
+ - Angular Material
+ - NgRx
+ - Firebase
+ - Progressive web application (PWA)
