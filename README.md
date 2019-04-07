@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/forssri/blooddonation/master/src/assets/small-full-logo.png" />
+</p>
+
 [![Build Status](https://travis-ci.org/forssri/blooddonation.svg?branch=master)](https://travis-ci.org/forssri/blooddonation)
 
 Rufus+ aims to change the workflow of Blood/Platelet donation. It is a free and open source portal.
